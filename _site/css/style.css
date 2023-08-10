@@ -62,11 +62,17 @@ body{
 }
 
 .comedian p{
-  font-size: 1.5em;
+  font-size: 1.25em;
 }
 
 .medium-title{
+  padding: 1% 0;
   font-size: 3em;
+}
+
+.small-title{
+  padding: 1% 0;
+  font-size: 2em;
 }
 
 .container.contact{
