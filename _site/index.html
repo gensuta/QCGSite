@@ -1,92 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-    	<meta charset="utf-8">
-    	<meta name="description" content="This is where your description goes">
-    	<meta name="keywords" content="one, two, three">
 
-		<title>Queer Comedy Group</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="This is where your description goes">
+	<meta name="keywords" content="one, two, three">
 
-		<!-- external CSS link -->
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/style.css">
-	</head>
-	<body>
-		
-		<!-- <header>
-			<nav class="flex center">
-				<span class ="fade-transition">Lorem</span>
-				<span class ="fade-transition">Lorem</span>
-				<span class ="fade-transition">Lorem</span>
-			</nav>
-		</header> -->
+	<!-- Fonts -->
+	<!-- Roboto -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+	<!-- Ubuntu -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
 
-		<div class ="wrapper" id="top">
-		
-			<!--Video/Image-->
+	<title>SUGARDRIP COMEDY</title>
 
-			<section class="container">
+	<!-- external CSS link -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+</head>
 
-			</section>
+<body>
 
+	<header id="top">
+		<!-- Sidebar-->
+		<!-- <div class="d-flex flex-column flex-shrink-0 bg-my-tertiary vh-100 sticky-sidebar">
+				<ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
 
-			<!--Meet the Members-->
+					<li class="nav-item"> <a href="#" class="nav-link active py-3 "> <small>Home</small> </a> </li>
+					<li class="nav-item"> <a href="#" class="nav-link py-3"> <small>Meet the Members</small> </a> </li>
+					  <li class="nav-item dropdown dropend">
+						 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Shows
+					  	</a>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+						  <li><a class="dropdown-item" href="#">Upcoming Shows</a></li>
+						  <li><a class="dropdown-item" href="#">Past Shows</a></li>
+						  <li><a class="dropdown-item" href="#">Book us for a show!</a></li>
+						</ul>
+					</li>
+					  <li class="nav-item"> <a href="#" class="nav-link py-3"> <small>Bookings</small> </a> </li>
+				</ul>
+			</div> -->
 
-			<h2 class="medium-title">Meet the Members</h2>
-			<section class="flex">
-				<section class="comedian fade-transition">
-					<img class="center" src="https://placehold.co/400x400" alt="JaneDoe">
-					<span class="small-title center">First Last</span>
-					<p class="center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat earum necessitatibus odit, eligendi animi amet?</p>
-				</section>
-		
-				<section class="comedian fade-transition">
-					<img class="center" src="https://placehold.co/400x400" alt="JaneDoe">
-					<span class="small-title center">First Last</span>
-					<p class="center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat earum necessitatibus odit, eligendi animi amet?</p>
-				</section>
+		<!-- Navbar in case that's preferred -->
+		<nav class="navbar navbar-expand-lg navbar light ml-xl-6">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+				aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="members.html">Meet the Members</a>
+					</li>
 
-			</section>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+							data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Shows
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item" href="upcoming-shows.html">Upcoming Shows</a>
+							<a class="dropdown-item" href="past-shows.html">Past Shows</a>
+							<a class="dropdown-item" href="booking.html">Book Us for a Show!</a>
+						</div>
+					</li>
 
-			<!--Past Shows-->
+					<li class="nav-item">
+						<a class="nav-link" href="booking.html">Booking</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
 
-			<section class="flex">
-				<section class="container">
+	</header>
 
-				</section>
-		
-				<section class="container">
-		
-				</section>
-			</section>
-		
-			<!-- Contact Us -->
-			<h2 class="medium-title">Contact Us</h2>
-
-			<section class="container contact">
-				<!-- FormSpree... -->
-				<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/{form_id}" method="post">
-					<fieldset id="fs-frm-inputs">
-					<label for="full-name">Full Name</label>
-					<input type="text" name="name" id="full-name" placeholder="First and Last" required="">
-					<label for="email-address">Email Address</label>
-					<input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
-					<label for="message">Message</label>
-					<textarea rows="5" name="message" id="message" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus." required=""></textarea>
-					<input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-					</fieldset>
-					<input type="submit" value="Submit">
-				</form>
-			</section>
-
+	<!-- Page content wrapper-->
+	<div id="page-content-wrapper">
+		<!-- Page content-->
+		<div class="container-fluid">
+			<h1 class="large-title text-center"> <span class="highlight">SUGARDRIP</span> COMEDY</h1>
+			<img class="main-img" src="https://placehold.co/600x200" alt="">
 		</div>
 
-		<button onclick="topFunction()" id="myBtn" class="center" title="Go to top">Back to Top</button>
-		<footer>
-			
-		</footer>
+		<!-- Bootstrap 5 Contact Form Snippet -->
 
-		<script type="text/javascript" src="js/main.js"></script>
-	</body>
+		<div class="container-fluid px-5 my-5">
+			<div class="row justify-content-center">
+				<div class="col-xl-10">
+					<div class="card border-0 rounded-3 shadow-lg overflow-hidden">
+						<div class="card-body p-0">
+							<div class="row g-0">
+								<div class="col-sm-6 d-none d-sm-block bg-image"></div>
+								<div class="col-sm-6 p-4">
+									<div class="text-center">
+										<div class="h3 fw-light">Contact Form</div>
+										<p class="mb-4 text-muted">Split layout contact form</p>
+									</div>
+
+									<!-- * * * * * * * * * * * * * *
+			// * * SB Forms Contact Form * *
+			// * * * * * * * * * * * * * * *
+  
+			// This form is pre-integrated with SB Forms.
+			// To make this form functional, sign up at
+			// https://startbootstrap.com/solution/contact-forms
+			// to get an API token!
+			-->
+
+									<form id="contactForm" data-sb-form-api-token="API_TOKEN">
+
+										<!-- Name Input -->
+										<div class="form-floating mb-3">
+											<input class="form-control" id="name" type="text" placeholder="Name"
+												data-sb-validations="required" />
+											<label for="name">Name</label>
+											<div class="invalid-feedback" data-sb-feedback="name:required">Name is
+												required.</div>
+										</div>
+
+										<!-- Email Input -->
+										<div class="form-floating mb-3">
+											<input class="form-control" id="emailAddress" type="email"
+												placeholder="Email Address" data-sb-validations="required,email" />
+											<label for="emailAddress">Email Address</label>
+											<div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email
+												Address is required.</div>
+											<div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email
+												Address Email is not valid.</div>
+										</div>
+
+										<!-- Message Input -->
+										<div class="form-floating mb-3">
+											<textarea class="form-control" id="message" type="text"
+												placeholder="Message" style="height: 10rem;"
+												data-sb-validations="required"></textarea>
+											<label for="message">Message</label>
+											<div class="invalid-feedback" data-sb-feedback="message:required">Message is
+												required.</div>
+										</div>
+
+										<!-- Submit success message -->
+										<div class="d-none" id="submitSuccessMessage">
+											<div class="text-center mb-3">
+												<div class="fw-bolder">Form submission successful!</div>
+												<p>To activate this form, sign up at</p>
+												<a
+													href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+											</div>
+										</div>
+
+										<!-- Submit error message -->
+										<div class="d-none" id="submitErrorMessage">
+											<div class="text-center text-danger mb-3">Error sending message!</div>
+										</div>
+
+										<!-- Submit button -->
+										<div class="d-grid">
+											<button class="btn btn-primary btn-lg disabled" id="submitButton"
+												type="submit">Submit</button>
+										</div>
+									</form>
+									<!-- End of contact form -->
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Back To Top Button -->
+		<div class="d-grid gap-2 col-6 py-2 mx-auto">
+			<button onclick="topFunction()" id="myBtn" class="btn btn-light btn-lg" title="Go to top">Back to
+				Top</button>
+		</div>
+
+	</div>
+
+
+
+	<footer>
+        <h2 class="small-title text-center">Follow Us</h2>
+        <div class="d-flex justify-content-center socials text-center space">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+        </div>
+    </footer>
+	<!-- Font awesome -->
+	<script src="https://kit.fontawesome.com/0856ec6ff3.js" crossorigin="anonymous"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+	<!-- Bootstrap -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+		crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
 </html>

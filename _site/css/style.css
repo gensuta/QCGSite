@@ -7,6 +7,27 @@
   box-sizing: border-box;
 }
 
+
+/******************************************
+/* Variables
+/*******************************************/
+:root{
+  --primaryColor:#e2aff8;
+  --secondaryColor:#54c8cc;
+  --tertiaryColor:#edc95b;
+
+  --primaryFontColor:black;
+  
+  --secondaryFontColor:white;
+
+  --activeFontColor:red;
+
+  --headerFamily: 'Ubuntu', sans-serif;
+  --descriptiveFamily: 'Roboto', sans-serif;
+
+  --underline-width: 0%;
+}
+
 /******************************************
 /* LAYOUT
 /*******************************************/
@@ -15,64 +36,115 @@ li{
   list-style: none;
 }
 
-header,footer{
-  background-color: rgb(187, 61, 99);;
+header,footer,nav{
+  background-color: var(--tertiaryColor);
 }
 
-header{
-  border-bottom: 1px solid black;
-  height: 35px;
-}
 
 footer{
-  border-top: 1px solid black;
-  height: 100px;
+  height: 150px;
+
 }
 
-.container{
-  border: 1px solid black;
-  height: 400px;
-  margin: 2% 2%;
-}
 
 body{
-  font-size: 14px;
-  background-color: rgb(252, 103, 148);
+  font-size: 16px;
+  background-color: var(--primaryColor);
+  color: var(--primaryFontColor);
+  font-family: var(--descriptiveFamily);
+  top: 60px;
 }
 
-.center{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+.highlight{
+  color: var(--secondaryFontColor);
 }
 
-.center h1,h2,h3,h4,h5,p,span{
-  text-align: center;
+.highlight2{
+  color: var(--secondaryFontColor);
+  text-decoration: none; 
+  /* I want this to animate when we're looking at this */
 }
 
+.sticky-sidebar {
+  position:fixed;
+  max-width: 20%;
+  }
+
+  a{
+    font-style: none;
+    text-decoration: none;
+    color: black;
+  }
+
+  .nav-item.active > a{
+    text-decoration: underline;
+  }
+
+  .bg-my-primary{
+    background: var(--primaryColor);
+  }
+
+  .bg-my-secondary{
+    background: var(--secondaryColor);
+  }
+
+  .bg-my-tertiary{
+    background: var(--tertiaryColor);
+  }
+
+  .f-primary{
+    color: var(--primaryFontColor);
+  }
+
+  .hidden-line {
+    display: inline-block;
+    padding-bottom:2px;
+    background-image: linear-gradient(#000 0 0);
+    background-position: 0 100%; /*OR bottom left*/
+    background-size: 0% 2px;
+    background-repeat: no-repeat;
+    transition:
+      background-size 0.3s,
+      background-position 0s 0.3s; /*change after the size immediately*/
+  }
+  
+  .animated-line{
+    background-position: 100% 100%; /*OR bottom right*/
+    background-size: 100% 2px;
+  }
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
 .comedian img{
-  border-radius: 30%;
+  border-radius: 50%;
   opacity: 100%;
-  transition: opacity 0.3s ease-in-out;       
+  transition: all 0.2s ease-in-out;   
+  width: 600px;    
+  outline: 0.75em solid var(--secondaryFontColor);
+  box-shadow: 0 1.5em var(--primaryFontColor); 
 }
 
 .comedian p{
   font-size: 1.25em;
 }
 
+.large-title{
+  padding: 2% 0;
+  font-size: 4.5em;
+  font-family: var(--headerFamily);
+}
+
 .medium-title{
   padding: 1% 0;
   font-size: 3em;
+  font-family: var(--headerFamily);
 }
 
 .small-title{
   padding: 1% 0;
   font-size: 2em;
+  font-family: var(--headerFamily);
 }
 
 .container.contact{
@@ -88,18 +160,52 @@ body{
   width: 50%;
 }
 
-.fade-transition{
-    -moz-transition: all .2s ease-in;
-    -o-transition: all .2s ease-in;
-    -webkit-transition: all .2s ease-in;
-    transition: all .2s ease-in;
+.main-img{
+  width: 100%;
+}
+
+/* Large margin left */
+.ml-xl-6 { 
+  margin-left: 64px; 
+}
+
+.socials >*
+{
+  transition: all 0.2s ease-in-out;   
+  width: 50px;
+  font-size: 2em;
+}
+
+.socials >*:hover{
+  color: white;
+  transform: translateY(-5px);
+}
+
+.event-container{
+  background-color: var(--secondaryColor);
+  box-shadow: -1em 0.4em black;
+  transition: background-color 0.2s ease-in-out;   
+  border-radius: 1em;
+  padding: 0.5em;
+  margin-bottom: 2em;
+}
+
+.event-container:hover{
+  background-color: var(--tertiaryColor);
+}
+
+.carousel > .carousel-inner > .carousel-item > img{
+  width:640px; /* Yeap you can change the width and height*/
+  height:360px;
+}
+
+.custom-bullet{
+  list-style:⭐;
 }
 
 /* MOBILE */
 @media screen and (min-width:480px) {
-header span {
-  visibility: collapse;
-}
+
 }
 
 /* TABLET */
@@ -109,162 +215,14 @@ header span {
 
 /* DESKTOP */
 @media screen and (min-width:1024px) {
-
-  header span {
-    visibility: visible;
-  }
-
-  nav span:hover{
-    background-color: pink;
+  
+  .nav-link:hover{
+    color: var(--secondaryFontColor);
   }
 
   .comedian img:hover{
-    opacity: 50%;
+    outline: 0.5em solid var(--secondaryColor);
+    box-shadow: 0 0 var(--primaryFontColor); 
   }
 
-  
-  .flex{
-    display: flex;
-  }
-
-  .flex > section{
-    width: 50%;
-    margin: 0 4%;
-  }
-
-  .flex > span{
-    padding: 1% 3%;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    height: 100%;
-  }
-
-  header > .flex{
-    justify-content: space-between;
-  }
-}
-
-/*From w3 schools*/
-#myBtn {
-  margin-bottom: 2%;
-  width: 30%;
-  border: none;
-  background-color: gray; /* Set a background color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
-  font-size: 2em; /* Increase font size */
-}
-
-#myBtn:hover {
-  background-color: lightgray; /* Add a dark-grey background on hover */
-}
-
-/*From FormSpree*/
-
-#fs-frm input,
-#fs-frm select,
-#fs-frm textarea,
-#fs-frm fieldset,
-#fs-frm optgroup,
-#fs-frm label,
-#fs-frm #card-element:disabled {
-font-family: inherit;
-font-size: 100%;
-color: inherit;
-border: none;
-border-radius: 0;
-display: block;
-width: 100%;
-padding: 0;
-margin-top: 1rem;
--webkit-appearance: none;
--moz-appearance: none;
-}
-#fs-frm label,
-#fs-frm legend,
-#fs-frm ::placeholder {
-font-size: .825rem;
-margin-bottom: .5rem;
-padding-top: .2rem;
-display: flex;
-align-items: baseline;
-}
-
-/* border, padding, margin, width */
-#fs-frm input,
-#fs-frm select,
-#fs-frm textarea,
-#fs-frm #card-element {
-border: 1px solid rgba(0,0,0,0.2);
-background-color: rgba(255,255,255,0.9);
-padding: .75em 1rem;
-margin-bottom: 1.5rem;
-}
-#fs-frm input:focus,
-#fs-frm select:focus,
-#fs-frm textarea:focus {
-background-color: white;
-outline-style: solid;
-outline-width: thin;
-outline-color: gray;
-outline-offset: -1px;
-}
-#fs-frm [type="text"],
-#fs-frm [type="email"] {
-width: 100%;
-}
-#fs-frm [type="button"],
-#fs-frm [type="submit"],
-#fs-frm [type="reset"] {
-width: auto;
-cursor: pointer;
--webkit-appearance: button;
--moz-appearance: button;
-appearance: button;
-}
-#fs-frm [type="button"]:focus,
-#fs-frm [type="submit"]:focus,
-#fs-frm [type="reset"]:focus {
-outline: none;
-}
-#fs-frm [type="submit"],
-#fs-frm [type="reset"] {
-margin-bottom: 0;
-}
-#fs-frm select {
-text-transform: none;
-}
-
-#fs-frm [type="checkbox"] {
--webkit-appearance: checkbox;
--moz-appearance: checkbox;
-appearance: checkbox;
-display: inline-block;
-width: auto;
-margin: 0 .5em 0 0 !important;
-}
-
-#fs-frm [type="radio"] {
--webkit-appearance: radio;
--moz-appearance: radio;
-appearance: radio;
-}
-
-/* address, locale */
-#fs-frm fieldset.locale input[name="city"],
-#fs-frm fieldset.locale select[name="state"],
-#fs-frm fieldset.locale input[name="postal-code"] {
-display: inline;
-}
-#fs-frm fieldset.locale input[name="city"] {
-width: 52%;
-}
-#fs-frm fieldset.locale select[name="state"],
-#fs-frm fieldset.locale input[name="postal-code"] {
-width: 20%;
-}
-#fs-frm fieldset.locale input[name="city"],
-#fs-frm fieldset.locale select[name="state"] {
-margin-right: 3%;
 }
