@@ -6,7 +6,9 @@
 *{
   box-sizing: border-box;
 }
-
+@-ms-viewport{
+  width: device-width;
+}
 
 /******************************************
 /* Variables
@@ -40,10 +42,13 @@ header,footer,nav{
   background-color: var(--tertiaryColor);
 }
 
-
+/*TODO: ensure the footer as stuck to the BOTTOM of the page and not the bottom of the device while scrolling...sigh*/
 footer{
   height: 150px;
-
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
 }
 
 
