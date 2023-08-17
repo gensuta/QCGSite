@@ -127,6 +127,14 @@ body{
   font-size: 1.25em;
 }
 
+.comedian-wrapper{
+  background: #ab81bd;
+  box-shadow: 0 0.75em #472e52;
+  border-radius: 2%;
+  margin: 6%;
+  padding-right: 2%;
+}
+
 .large-title{
   padding: 2% 0;
   font-size: 4.5em;
@@ -201,12 +209,15 @@ body{
   list-style:⭐;
 }
 
+
+
 /* MOBILE */
 @media screen and (min-width:360px) {
   .comedian img{
-    width: 375px;
+    width: 300px;
     border-radius: 50%;
     margin: auto 0;
+    outline: 0.25em solid var(--secondaryFontColor);
   }
 
   .large-title{
@@ -238,18 +249,18 @@ body{
     color: var(--secondaryFontColor);
   }
 
-  .comedian img:hover{
+  /* .comedian img:hover{
     outline: 0.5em solid var(--secondaryColor);
     box-shadow: 0 0 var(--primaryFontColor); 
-  }
+  } */
 
   .comedian img{
     border-radius: 50%;
     opacity: 100%;
     transition: all 0.2s ease-in-out;   
-    width: 600px;    
+    width: 550px;    
     outline: 0.75em solid var(--secondaryFontColor);
-    box-shadow: 0 1.5em var(--primaryFontColor); 
+    /* box-shadow: 0 1.5em var(--primaryFontColor);  */
   }
 
 }
