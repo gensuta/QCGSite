@@ -121,14 +121,7 @@ body{
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
-.comedian img{
-  border-radius: 50%;
-  opacity: 100%;
-  transition: all 0.2s ease-in-out;   
-  width: 600px;    
-  outline: 0.75em solid var(--secondaryFontColor);
-  box-shadow: 0 1.5em var(--primaryFontColor); 
-}
+
 
 .comedian p{
   font-size: 1.25em;
@@ -209,13 +202,33 @@ body{
 }
 
 /* MOBILE */
-@media screen and (min-width:480px) {
+@media screen and (min-width:360px) {
+  .comedian img{
+    width: 375px;
+    border-radius: 50%;
+    margin: auto 0;
+  }
 
+  .large-title{
+    padding: 2% 0;
+    font-size: 3.75em;
+    font-family: var(--headerFamily);
+  }
+  .event-container > *{
+    margin: 1%;
+  }
 }
 
 /* TABLET */
 @media screen and (min-width:800px) {
-
+  .comedian img{
+    border-radius: 50%;
+    opacity: 100%;
+    transition: all 0.2s ease-in-out;   
+    width: 600px;    
+    outline: 0.75em solid var(--secondaryFontColor);
+    box-shadow: 0 1.5em var(--primaryFontColor); 
+  }
 }
 
 /* DESKTOP */
@@ -228,6 +241,15 @@ body{
   .comedian img:hover{
     outline: 0.5em solid var(--secondaryColor);
     box-shadow: 0 0 var(--primaryFontColor); 
+  }
+
+  .comedian img{
+    border-radius: 50%;
+    opacity: 100%;
+    transition: all 0.2s ease-in-out;   
+    width: 600px;    
+    outline: 0.75em solid var(--secondaryFontColor);
+    box-shadow: 0 1.5em var(--primaryFontColor); 
   }
 
 }
