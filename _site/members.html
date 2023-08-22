@@ -134,94 +134,42 @@
                
 
 
-        <!-- Bootstrap 5 Contact Form Snippet -->
-
-        <div class="container-fluid px-5 my-5">
-            <div class="row justify-content-center">
-                <div class="col-xl-10">
-                    <div class="card border-0 rounded-3 shadow-lg overflow-hidden">
-                        <div class="card-body p-0">
-                            <div class="row g-0">
-                                <div class="col-sm-6 d-none d-sm-block bg-image"></div>
-                                <div class="col-sm-6 p-4">
-                                    <div class="text-center">
-                                        <div class="h3 fw-light">Contact Form</div>
-                                        <p class="mb-4 text-muted">Split layout contact form</p>
-                                    </div>
-
-                                    <!-- * * * * * * * * * * * * * *
-			// * * SB Forms Contact Form * *
-			// * * * * * * * * * * * * * * *
-  
-			// This form is pre-integrated with SB Forms.
-			// To make this form functional, sign up at
-			// https://startbootstrap.com/solution/contact-forms
-			// to get an API token!
-			-->
-
-                                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-
-                                        <!-- Name Input -->
-                                        <div class="form-floating mb-3">
-                                            <input class="form-control" id="name" type="text" placeholder="Name"
-                                                data-sb-validations="required" />
-                                            <label for="name">Name</label>
-                                            <div class="invalid-feedback" data-sb-feedback="name:required">Name is
-                                                required.</div>
-                                        </div>
-
-                                        <!-- Email Input -->
-                                        <div class="form-floating mb-3">
-                                            <input class="form-control" id="emailAddress" type="email"
-                                                placeholder="Email Address" data-sb-validations="required,email" />
-                                            <label for="emailAddress">Email Address</label>
-                                            <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email
-                                                Address is required.</div>
-                                            <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email
-                                                Address Email is not valid.</div>
-                                        </div>
-
-                                        <!-- Message Input -->
-                                        <div class="form-floating mb-3">
-                                            <textarea class="form-control" id="message" type="text"
-                                                placeholder="Message" style="height: 10rem;"
-                                                data-sb-validations="required"></textarea>
-                                            <label for="message">Message</label>
-                                            <div class="invalid-feedback" data-sb-feedback="message:required">Message is
-                                                required.</div>
-                                        </div>
-
-                                        <!-- Submit success message -->
-                                        <div class="d-none" id="submitSuccessMessage">
-                                            <div class="text-center mb-3">
-                                                <div class="fw-bolder">Form submission successful!</div>
-                                                <p>To activate this form, sign up at</p>
-                                                <a
-                                                    href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                                            </div>
-                                        </div>
-
-                                        <!-- Submit error message -->
-                                        <div class="d-none" id="submitErrorMessage">
-                                            <div class="text-center text-danger mb-3">Error sending message!</div>
-                                        </div>
-
-                                        <!-- Submit button -->
-                                        <div class="d-grid">
-                                            <button class="btn btn-primary btn-lg disabled" id="submitButton"
-                                                type="submit">Submit</button>
-                                        </div>
-                                    </form>
-                                    <!-- End of contact form -->
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+       	<!-- Contact Us -->
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-8 mt-5 bg-light rounded my-5">
+					<h1 class="text-center font-weight-bold medium-title my-1">Contact Us</h1>
+					<hr class="bg-light">
+					<h5 class="text-center text-success"></h5>
+					<form action="https://formspree.io/f/mvojkkdo" method="post" id="form-box" class="p-2">
+						<div class="form-group input-group my-2">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fas fa-user"></i></span>
+							</div>
+							<input type="text" name="name" class="form-control" placeholder="Enter your name" required>
+						</div>
+						<div class="form-group input-group my-2">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fas fa-envelope"></i></span>
+							</div>
+							<input type="email" name="email" class="form-control" placeholder="Enter your email"
+								required>
+						</div>
+						<div class="form-group input-group my-2">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fas fa-comment-alt"></i></span>
+							</div>
+							<textarea name="message" id="message" class="form-control" placeholder="Write your message"
+								cols="30" rows="4" required></textarea>
+						</div>
+						<div class="form-group my-2 custom-center">
+							<input type="submit" name="submit" id="submit" class="btn bg-my-secondary btn-block w-50"
+								value="Send">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 
         <!-- Back To Top Button -->
         <div class="d-grid gap-2 col-6 py-2 mx-auto">
@@ -236,9 +184,9 @@
     <footer>
         <h2 class="small-title text-center">Follow Us</h2>
         <div class="d-flex justify-content-center socials text-center space">
-            <a href="#"><i class="fab fa-youtube"></i> </a>
-			<a href="https://www.instagram.com/sugardripcomedy/"> <i class="fa fa-instagram" aria-hidden="true"></i> </a>
-            <a href="#"> <i class="fa-brands fa-tiktok"></i></a> 
+			<a href="#" target="_blank"><i class="fab fa-youtube"></i> </a>
+			<a href="https://www.instagram.com/sugardripcomedy/" target="_blank"> <i class="fa fa-instagram" aria-hidden="true"></i> </a>
+            <a href="#" target="_blank"> <i class="fa-brands fa-tiktok"></i></a> 
         </div>
     </footer>
     <!-- Font awesome -->

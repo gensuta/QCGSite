@@ -166,9 +166,7 @@ body{
   width: 50%;
 }
 
-.main-img{
-  width: 100%;
-}
+
 
 /* Large margin left */
 .ml-xl-6 { 
@@ -209,12 +207,22 @@ body{
   list-style:⭐;
 }
 
+.logo{
+  width: 250px;
+  margin: 2% 0;
+}
+
+.custom-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 
 /* MOBILE */
-@media screen and (min-width:360px) {
+@media screen and (min-width:360px) and (max-width:800px) {
   .comedian img{
-    width: 300px;
+    width: 200px;
     border-radius: 50%;
     margin: auto 0;
     outline: 0.25em solid var(--secondaryFontColor);
@@ -225,20 +233,57 @@ body{
     font-size: 3.75em;
     font-family: var(--headerFamily);
   }
+
+  .medium-title{
+    padding: 1% 0;
+    font-size: 2em;
+    font-family: var(--headerFamily);
+  }
+
   .event-container > *{
     margin: 1%;
   }
+  
+  .tagline{
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    margin: 50px 0px;
+  }
+
+  .main-img{
+    width: 100%;
+  }
+  
+  .special-footer{
+    margin-top: 125px;
+  }
+
 }
 
 /* TABLET */
-@media screen and (min-width:800px) {
+@media screen and (min-width:800px) and (max-width:1024px){
   .comedian img{
     border-radius: 50%;
     opacity: 100%;
     transition: all 0.2s ease-in-out;   
-    width: 600px;    
+    width: 400px;    
     outline: 0.75em solid var(--secondaryFontColor);
     box-shadow: 0 1.5em var(--primaryFontColor); 
+  }
+
+  .main-img{
+    height: 50%;
+  }
+
+  .tagline{
+    text-align: center;
+    font-size: 1.2em;
+    width: 70%;
+  }
+
+  .special-footer{
+    margin-top: 150px;
   }
 }
 
@@ -249,6 +294,26 @@ body{
     color: var(--secondaryFontColor);
   }
 
+  .bg-my-secondary.btn:hover{
+    background-color: var(--tertiaryColor);
+  }
+
+  .logo{
+    width: 400px;
+    margin: 1% 0;
+  }
+  
+  .tagline{
+    text-align: center;
+    font-size: 1.2em;
+    width: 36%;
+    margin-bottom: 30px;
+
+  }
+
+  .main-img{
+    width: 80%;
+  }
   /* .comedian img:hover{
     outline: 0.5em solid var(--secondaryColor);
     box-shadow: 0 0 var(--primaryFontColor); 
@@ -258,9 +323,17 @@ body{
     border-radius: 50%;
     opacity: 100%;
     transition: all 0.2s ease-in-out;   
-    width: 550px;    
+    width: 450px;    
     outline: 0.75em solid var(--secondaryFontColor);
     /* box-shadow: 0 1.5em var(--primaryFontColor);  */
+  }
+
+  .large-title h1{
+    font-size: 8em;
+  }
+
+  .special-footer{
+    margin-top: 215px;
   }
 
 }
