@@ -323,7 +323,7 @@ body{
     border-radius: 50%;
     opacity: 100%;
     transition: all 0.2s ease-in-out;   
-    width: 450px;    
+    height: 500px;
     outline: 0.75em solid var(--secondaryFontColor);
     /* box-shadow: 0 1.5em var(--primaryFontColor);  */
   }
