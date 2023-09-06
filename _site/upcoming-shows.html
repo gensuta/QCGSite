@@ -74,60 +74,22 @@
         </div>
 
         <!--List of events!-->
-        <div class="container">
-            <a href="#">
-                <div class="row justify-content-end event-container">
-                    <h2 class="medium-title px-3">[Event Title]</h2>
-                    <div class="col-2">
-                        <h3>[Event Date]</h3>
-                    </div>
-                    <div class="col-4">
-                        <h4>[Event Location]</h4>
-                        <h4>[Event Link]</h4>
-                    </div>
-                </div>
-            </a>
 
-            <a href="#">
-                <div class="row justify-content-end event-container">
-                    <h2 class="medium-title px-3">[Event Title]</h2>
-                    <div class="col-2">
-                        <h3>[Event Date]</h3>
-                    </div>
-                    <div class="col-4">
-                        <h4>[Event Location]</h4>
-                        <h4>[Event Link]</h4>
-                    </div>
+        <div class= "container" id="app">
+            <div v-if="events.length">
+                <div class="row justify-content-end event-container" v-for="e in events">
+                    <a :href="e.Link" target="_blank">
+                        <h2 class="medium-title px-3">{{e.Title}}</h2>
+                        <div class="col-2">
+                            <h3>{{e.Date}}</h3>
+                        </div>
+                        <div class="col-4">
+                            <h4>{{e.Location}}</h4>
+                        </div>
+                    </a>
                 </div>
-            </a>
-
-            <a href="#">
-                <div class="row justify-content-end event-container">
-                    <h2 class="medium-title px-3">[Event Title]</h2>
-                    <div class="col-2">
-                        <h3>[Event Date]</h3>
-                    </div>
-                    <div class="col-4">
-                        <h4>[Event Location]</h4>
-                        <h4>[Event Link]</h4>
-                    </div>
-                </div>
-            </a>
-
-            <a href="#">
-                <div class="row justify-content-end event-container">
-                    <h2 class="medium-title px-3">[Event Title]</h2>
-                    <div class="col-2">
-                        <h3>[Event Date]</h3>
-                    </div>
-                    <div class="col-4">
-                        <h4>[Event Location]</h4>
-                        <h4>[Event Link]</h4>
-                    </div>
-                </div>
-            </a>
-
-        </div>
+            </div>
+          </div>
     </div>
 
     <!-- Contact Us -->
@@ -185,6 +147,10 @@
             <a href="#" target="_blank"> <i class="fa-brands fa-tiktok"></i></a>
         </div>
     </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+    <script src ="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
     <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/0856ec6ff3.js" crossorigin="anonymous"></script>
 

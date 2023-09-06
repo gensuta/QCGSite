@@ -1,3 +1,26 @@
+const myEventsUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRzoD7fJxmchjzqGDGtTf2cGsRbPYEtl5ff8iXHgAgIToqAN9cv-YstfK572anvi33PNaFq26AsGI-4/pub?output=csv";
+
+const app = new Vue({
+  el: "#app",
+  data: function () {
+    return {
+      events: []
+    };
+  },
+  created: function () {
+    this.fetchEvents();
+  },
+  methods: {
+    fetchEvents() {
+      Papa.parse(myEventsUrl, {
+        download: true,
+        header: true,
+        complete: (results) => this.events = results.data
+      });
+    }
+  }
+});
+
 
 
 let backtoTopBtn = document.getElementById("myBtn");
