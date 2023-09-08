@@ -75,7 +75,7 @@
 
         <!--List of events!-->
 
-        <div class= "container" id="app">
+        <div class="container" id="app">
             <div v-if="events.length">
                 <div class="row justify-content-end event-container" v-for="e in events">
                     <a :href="e.Link" target="_blank">
@@ -89,7 +89,7 @@
                     </a>
                 </div>
             </div>
-          </div>
+        </div>
     </div>
 
     <!-- Contact Us -->
@@ -98,30 +98,40 @@
             <div class="col-md-8 mt-5 bg-light rounded my-5">
                 <h1 class="text-center font-weight-bold medium-title my-1">Contact Us</h1>
                 <hr class="bg-light">
-                <h5 class="text-center text-success"></h5>
+                <p class="text-center text-success"></p>
                 <form action="https://formspree.io/f/mvojkkdo" method="post" id="form-box" class="p-2">
                     <div class="form-group input-group my-2">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                         </div>
-                        <input type="text" name="name" class="form-control" placeholder="Enter your name" required>
+                        <label>
+                            <input type="text" name="name" class="form-control" placeholder="Enter your name" required>
+                        </label>
+
                     </div>
                     <div class="form-group input-group my-2">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                         </div>
-                        <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+                        <label>
+                            <input type="email" name="email" class="form-control" placeholder="Enter your email"
+                                required>
+                        </label>
                     </div>
                     <div class="form-group input-group my-2">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-comment-alt"></i></span>
                         </div>
-                        <textarea name="message" id="message" class="form-control" placeholder="Write your message"
-                            cols="30" rows="4" required></textarea>
+                        <label>
+                            <textarea name="message" id="message" class="form-control" placeholder="Write your message"
+                                cols="30" rows="4" required></textarea>
+                        </label>
                     </div>
-                    <div class="form-group my-2 custom-center">
-                        <input type="submit" name="submit" id="submit" class="btn bg-my-secondary btn-block w-50"
-                            value="Send">
+                    <div class="form-group my-2">
+                        <label class="custom-center">
+                            <input type="submit" name="submit" id="submit" class="btn bg-my-secondary btn-block w-50"
+                                value="Send">
+                        </label>
                     </div>
                 </form>
             </div>
@@ -141,16 +151,17 @@
     <footer>
         <h2 class="small-title text-center">Follow Us</h2>
         <div class="d-flex justify-content-center socials text-center space">
-            <a href="#" target="_blank"><i class="fab fa-youtube"></i> </a>
-            <a href="https://www.instagram.com/sugardripcomedy/" target="_blank"> <i class="fa fa-instagram"
-                    aria-hidden="true"></i> </a>
-            <a href="#" target="_blank"> <i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" aria-label="Link to SugarDrip Comedy's Youtube" target="_blank"><i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/sugardripcomedy/" aria-label="Link to SugarDrip Comedy's Instagram"
+                target="_blank"> <i class="fa fa-instagram" aria-hidden="true"></i> </a>
+            <a href="#" aria-label="Link to SugarDrip Comedy's Tiktok" target="_blank"> <i
+                    class="fa-brands fa-tiktok"></i></a>
         </div>
     </footer>
 
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
-    <script src ="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
+    <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
     <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/0856ec6ff3.js" crossorigin="anonymous"></script>
 
